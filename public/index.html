@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>Student Portfolio | Create your profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Student portfolio home"><span class="brand-mark">s.</span><span>folio<span class="brand-dot">.</span></span></a>
+      <nav class="main-nav" aria-label="Main navigation" id="main-nav"></nav>
+      <a class="top-cta" href="#portfolio-form">Build your profile <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="about-view" id="about-view" hidden aria-labelledby="about-title">
+        <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> YOUR STORY</p><h2 id="about-title">A little more <span>about me.</span></h2></div></div>
+        <div id="saved-profile" class="saved-profile" aria-live="polite"></div>
+      </section>
+      <section class="feedback-view" id="feedback-view" hidden aria-labelledby="feedback-title">
+        <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> WE’RE LISTENING</p><h2 id="feedback-title">Your thoughts <span>matter.</span></h2></div><p>Have an idea or something to share?<br>We’d love to hear from you.</p></div>
+        <form id="feedback-form" class="feedback-card">
+          <label class="field"><span>Your name <b>*</b></span><input name="name" autocomplete="name" placeholder="e.g. Alex Morgan" required maxlength="100"></label>
+          <label class="field"><span>Email address <b>*</b></span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="254"></label>
+          <label class="field"><span>Phone number <b>*</b></span><input name="phone" type="tel" autocomplete="tel" placeholder="e.g. +1 555 123 4567" required maxlength="25"></label>
+          <label class="field"><span>Your feedback <b>*</b></span><textarea name="feedback" rows="6" placeholder="Tell us what you think..." required maxlength="2000"></textarea></label>
+          <div class="feedback-actions"><p class="feedback-status" id="feedback-status" role="status" aria-live="polite"></p><button class="submit-button" type="submit">Send feedback <span>↗</span></button></div>
+        </form>
+      </section>
+      <div id="home-view">
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> YOUR STORY, YOUR SPACE</p>
+          <h1>Make your next<br>chapter <span>stand out.</span></h1>
+          <p class="hero-description">A home for the ideas, skills, and work that make you <em>you.</em> Start building a portfolio worth sharing.</p>
+          <a class="hero-link" href="#portfolio-form">Create your student profile <span>↓</span></a>
+          <div class="hero-note"><span class="note-icon">✳</span><span>Thoughtfully yours.<br><strong>Ready for what’s next.</strong></span></div>
+        </div>
+        <div class="hero-art reveal" aria-label="Abstract portfolio illustration" role="img">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="spark spark-one">✳</div><div class="spark spark-two">✦</div><div class="spark spark-three">✳</div>
+          <div class="art-card card-back"><span class="mini-label">A LITTLE ABOUT ME</span><div class="mini-lines"><i></i><i></i><i></i></div><div class="mini-avatar">✦</div></div>
+          <div class="art-card card-front"><div class="card-topline"><span>MY PORTFOLIO</span><span class="live-dot"></span></div><div class="profile-avatar">S</div><div class="profile-name">Your name here<span>Student · Creative thinker</span></div><div class="profile-divider"></div><div class="skill-row"><b>SKILLS</b><span>Design</span><span>Research</span><span>+</span></div><div class="profile-footer"><span>Made with intention</span><span>↗</span></div></div>
+          <div class="floating-chip chip-top">✦ &nbsp;YOUR IDEAS</div><div class="floating-chip chip-bottom"><span class="tiny-check">✓</span> &nbsp;Ready to share</div>
+        </div>
+        <div class="hero-index"><span>01</span><i></i> A PROFILE THAT FEELS LIKE YOU</div>
+      </section>
+
+      <section class="form-section" id="portfolio-form">
+        <div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> THE GOOD STUFF</p><h2>Let’s get to know <span>you.</span></h2></div><p>Fill in the details you’d like to share.<br>You can always make it your own.</p></div>
+        <form id="portfolio-form-element">
+          <div class="form-card reveal">
+            <div class="form-card-heading"><span class="step-number">01</span><div><h3>The basics</h3><p>Start with a few things about you.</p></div><span class="heading-spark">✳</span></div>
+            <div class="field-grid">
+              <label class="field field-wide"><span>Your name <b>*</b></span><input name="name" autocomplete="name" placeholder="e.g. Alex Morgan" required maxlength="100"></label>
+              <label class="field"><span>Email address <b>*</b></span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="254"></label>
+              <label class="field"><span>Age</span><input name="age" type="number" min="13" max="120" placeholder="Your age"></label>
+              <label class="field"><span>Location</span><input name="location" autocomplete="address-level2" placeholder="City, Country" maxlength="120"></label>
+              <label class="field"><span>Gender</span><select name="gender"><option value="">Select (optional)</option><option>Woman</option><option>Man</option><option>Non-binary</option><option>Prefer not to say</option><option>Self-describe</option></select></label>
+            </div>
+          </div>
+
+          <div class="form-card reveal">
+            <div class="form-card-heading"><span class="step-number">02</span><div><h3>Your studies</h3><p>Tell us where you’re learning and growing.</p></div><span class="heading-spark">✳</span></div>
+            <div class="field-grid">
+              <label class="field"><span>Academic year</span><select name="academicYear"><option value="">Choose your year</option><option>Year 1</option><option>Year 2</option><option>Year 3</option><option>Year 4</option><option>Graduate</option><option>Other</option></select></label>
+              <label class="field"><span>Institution</span><input name="institution" placeholder="Your school or university" maxlength="160"></label>
+              <label class="field field-wide"><span>Course or major</span><input name="course" placeholder="e.g. Computer Science" maxlength="160"></label>
+            </div>
+          </div>
+
+          <div class="form-card reveal">
+            <div class="form-card-heading"><span class="step-number">03</span><div><h3>The things you do</h3><p>What are you into? Add items separated by commas.</p></div><span class="heading-spark">✳</span></div>
+            <div class="field-grid">
+              <label class="field field-wide"><span>Skills</span><input name="skills" placeholder="e.g. Writing, Python, public speaking" maxlength="500"></label>
+              <label class="field field-wide"><span>Hobbies &amp; interests</span><input name="hobbies" placeholder="e.g. Photography, hiking, music" maxlength="500"></label>
+              <label class="field field-wide"><span>Projects</span><textarea name="projects" rows="3" placeholder="Share projects you’re proud of — separate each with a comma." maxlength="1200"></textarea></label>
+              <label class="field field-wide"><span>Certificates &amp; awards</span><textarea name="certificates" rows="3" placeholder="Add certificates or awards, separated by commas." maxlength="1200"></textarea></label>
+            </div>
+          </div>
+
+          <div class="form-card about-card reveal">
+            <div class="form-card-heading"><span class="step-number">04</span><div><h3>In your own words</h3><p>A little about you, your path, or what you hope to do.</p></div><span class="heading-spark">✳</span></div>
+            <label class="field"><span>About me</span><textarea name="aboutMe" rows="5" placeholder="Here’s where your story begins..." maxlength="2000"></textarea><small class="character-count">0 / 2000</small></label>
+          </div>
+
+          <div class="form-end reveal"><div class="save-note"><span class="save-lock">⌑</span><span>Your details are saved securely to your portfolio server.</span></div><button class="submit-button" type="submit">Save my details <span>↗</span></button></div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+      </div>
+    </main>
+    <footer><a class="brand footer-brand" href="#top"><span class="brand-mark">s.</span><span>folio<span class="brand-dot">.</span></span></a><span>A little space to show the whole you.</span><a href="#top" class="back-top">BACK TO TOP ↑</a></footer>
+  </div>
+</body>
+</html>
